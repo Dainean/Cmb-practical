@@ -1,0 +1,318 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[twoside,twocolumn]{article}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Observations of CMB $\bullet$ January 2017 $\bullet$ Introduction to Radio Astronomy} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{graphicx}
+
+\graphicspath{ {images/} }
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+	\posttitle{\end{center}} % Article title closing formatting
+\title{Observations of the CMB with the Kapteyn Radio telescope} % Article title
+\author{%
+	\textsc{Sander Verdult}\\%\thanks{A thank you or further information} \\[1ex] % Your name
+	\normalsize Kapteyn Institute Groningen \\ % Your institution
+	\normalsize \href{verdult@fmf.nl}{verdult@fmf.nl} % Your email address
+	%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+	%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+	%\normalsize University of Utah \\ % Second author's institution
+	%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+	\begin{abstract}
+		\noindent Observations of the the pulsar B0329+54 with the Dwingelo radiotelescope, and using the information found to deterine the period, dispersion measure of the interstellar medium, and with some values from literature things such as the age, the distance to our solar system, the magnetic field strength and more.
+	\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+	
+	% Print the title
+	\maketitle
+	
+	%----------------------------------------------------------------------------------------
+	%	ARTICLE CONTENTS
+	%----------------------------------------------------------------------------------------
+	
+	\section{Introduction}
+	%\lettrine[nindent=0em,lines=3]{S}ummary of the aim of the experiment, briefly introducing the field of pulsars, key observational characteristics, and the pulsar that is the target of this observation.\\
+%	About pulsars in general\\
+	\subsection{Radio Astronomy}
+	\lettrine[nindent=0em,lines=2]{R}adio astronomy is not a very old field
+	
+	\subsection{Cosmic Microwave Background}
+
+	\subsection{Atmospheric opacity}
+
+	\subsection{Brightness temperature}
+	
+	\subsection{Radiative transfer}
+	
+	%------------------------------------------------
+	
+	\section{Observations}
+	
+	\subsection{Telescope}
+		The Dwingeloo Radiotelescope started service in 1956, making it one of the oldest telescopes in the world. Up to 1998 it was used for scientific research by ASTRON. By lack of use it started to decay, but by the help of camras it was restored from 2012 to 2014 as a national monument, and is now once more ready for use by radio astronomers, astronomy students and the likes./cite{camras}
+		
+			
+			\begin{table}[h]
+				\caption{Kapteyn Radiotelescope Specifications}
+				\centering
+				\begin{tabular}{llr}
+					\toprule
+					%\multicolumn{2}{c}{Name} \\
+					\cmidrule(r){1-2}
+					Specification & Value \\
+					\midrule
+					Observing Frequency & 11 GHz \\
+					Bandwidth & 1 GHz \\
+					Aperture Diameter & 178 mm\\
+					\bottomrule
+				\end{tabular}
+			\end{table}
+	
+	\subsection{Calibrations}
+	
+	\subsection{Observations}
+	%Text requiring further explanation\footnote{Bijvoorbeeld}.
+	
+	
+	\section{Data Reduction}
+	\subsection{Determining the period}
+	Data reduction was done in the web interface of the Astron education website (www.astron.nl/onderwijs), where the data of the observation could be accessed. 
+	First we used the dynamical spectrum displayed below to get a rough estimate of the pulse period for our object. This was done by pinning the pulse at a specific wavelength to specific times, and determining the difference. We used the dynamical spectrum between 16 and 18 seconds for our first estimate.
+
+%	\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=1\linewidth]{dynamical}
+%	\caption{Dynamical spectrum between 16 and 18 seconds, showing three distinct pulses.The intensity indicates signal strength, the vertical lines show different frequencies. Note that the pulsar signal arrives at different times for different wavelengths}
+%	\label{Figure 1}
+ %	\end{figure}
+	
+	
+	\begin{table}[h]
+		\caption{Pulse measurements}
+		\centering
+		\begin{tabular}{llr}
+			\toprule
+			%\multicolumn{2}{c}{Name} \\
+			\cmidrule(r){1-2}
+			Time (s) & Frequency (MHz) \\
+			\midrule
+			16.348762 & 417.200781 \\
+			17.065662 & 417.200781 \\
+			17.780409 & 417.200781\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	Next we used this estimate of the period to do a fast Fourier transform at 420.07 MHz, resulting in the spectrum shown below in figure 2. The spikes are an intiger multiple of the pulse frequency, so by counting the pulses over a larger range, one can make a better a estimate of the pulse time. Dividing 28 pulses over a frequency 39.19 Hz gives us an improved estimate of 0.714444 seconds. 
+	
+
+	Using this improved estimate still showed an offset between the early and latter pulses, showing us that this estimate was not entirely correct either. We started out with figure 3, where the peaks clearly do not overlap, and it took a series of minor changes to get the peaks of the pulse to overlap exactly such as in figure 4, which gave us a final period estimate of 0.714515 seconds
+
+	\newpage
+	\subsection{Determining the dispersion measure}
+	Having found our period, we can now use our data to determine the time difference in arrival of the pulses different frequencies. Plotting a single pulse at different frequencies shows that the lower frequencies have a higher delay then the higher frequencies due to the electron density between our pulsar and the earth.  \cite{Spingola}
+	
+
+	
+	Measuring these different times at different frequencies, we can use kapteyn-fit to do a least square fitting method on our data, and determine the actual dispersion. With a bit of programming this resulted in a set of data points where the strength of the slope gives us the measured dispersion measure. Adjusting the equation so that we could look for a linear equation, we found a dispersion measure of 26.97  
+
+			
+	Compensating for this dispersion measure should have given us nicely overlapping peaks. Here however we ran in to a bug on the astron site which could not be avoided, and the 
+	
+	\subsection{Pulse Profile}
+	Now that determined the dispersion measure and the acurate period, we can calculate the pulse profile of PSR B0329+54. By correcting for the dispersion measure and then adding up the profile of all the frequencies in which the pulse is active, we get a single profile covers the pulse in detail. We do believe that though the previous step had a bug, the final result still got determined properly by the web application.
+
+		
+	
+	
+	%------------------------------------------------
+
+	\section{Results}
+	\subsection{Period}
+	We determined the period to be P = 0.714515 seconds.
+	\subsection{dispersion measure}
+	The dispersion measure we found was 26.97.
+	
+	\subsection{Period change}
+	We could not determine a change in the time of our measurements. This in term means that there are a lot of other factors we can't determine, but we will discuss these at the discussions.
+	
+	%------------------------------------------------
+	
+	\section{Discussion}
+	Summary of what the results tell you about this pulsar, how does it compare with other
+	pulsars, what does the dispersion measure tell you about the interstellar medium
+	\subsection{Period}
+	The period we found ( P = 0.714515 seconds)is a really common period for a pulsar to have. \cite{Wielebinski} Literature gives us a frequency of 1.400 per s, which replies to a period of 0.71429, which is similar to what we measured. \cite{Hobbs} 
+	
+	\subsection{Period Change}
+	Though we could not measure the change in period ourself, we have looked this up in the literature, and we found a value of $\dot{P} = 2.048 \cdot {10}^{-15} s  {s}^{-1}$	\cite{Hobbs}
+	
+	\subsection{Age of the pulsar}
+	If we have the period and the pace at which the period changes, we can also determine the age of the pulsar by the following formula: \cite{Ryan}
+		\begin{equation}
+	\tau =\frac { 1 }{ 2 } \frac { P }{ \dot { P }  } =\frac { 1 }{ 2 } \frac { 0.71415 }{ 2.048\cdot { 10 }^{ -14 } } 
+		\end{equation}
+		\begin{equation}
+		=1.743{ \cdot 10 }^{ 13 }s\quad =\quad 5.528\cdot { 10 }^{ 5 } year
+		\end{equation}
+	
+	\subsection{Magnetic field of the pulsar}
+	With the same information we can also determine the minimum strength of the magnetic field around the pulsar.
+	\begin{equation}
+	B/tesla\ge 3.3\cdot { 10 }^{ 15 }\sqrt { P\dot { P }  } 
+	\end{equation}
+	This results in a magnetic field of atleast $3.99\cdot{10}^{8}$ tesla
+	
+	\subsection{Dispersion measure}
+	The dispersion measure we found was 26.97.The one we found in literature was 26.84 \cite{Wang} which is again really close to what we measured. 
+	
+	\subsection{Distance}
+	With the Dispersion measure and a model for the galactic free electron density we can enter the right ascencion and declination of our pulsar, and tell the model to integrate to a dispersion measure of $26.97 pc/{cm}^{3}$ at a frequency of 420 Ghz, in which case we find a distance of 1.115 kpc. Literature\cite{Wang} gives us a paralax distance of $1.06\pm.12$ kpc so this estimate seems correct aswell.
+		
+
+	\section{Conclusions}
+	\subsection{Errors}
+	Important to note is that we have been lax with error margins. Being more precise with these and keeping track of them would have helped us determine how valuable our results are. To properly keep track of the errors in our measurements and calculations, we should have done so from the start. 
+
+	\subsection{Comparison with other pulsars}
+	Compared to other pulsars both the magnetic field and the period seem to be part of the norm \cite{Burke}. Beyond the strong intensity, which is most likely due to it's relative close distance, PSR B0329+54 is an ordinary pulsar.
+
+	\subsection{Future experiments}
+	More observation times are required to calculate the time derivative of the period. Taking into account effects from the motions of our solar system and earth, we should be able to get an accurate estimation of how quickly the period changes over time. This in turn means that information about the size, age, magnetic field and more can be calculated rather precisely. 
+	%----------------------------------------------------------------------------------------
+	%	REFERENCE LIST
+	%----------------------------------------------------------------------------------------
+	
+%\bibliographystyle{plain}
+%\bibliography{pulsar}
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+	
+	
+	\bibitem{Camras}Camras\\
+	Informatie over de radiotelescoop\\
+	http://www.camras.nl/over-de-radiotelescoop/
+	
+	\bibitem{Wielebinski}
+	Richard Wielebinski\\
+	The Characteristics of (Normal) Pulsars\\
+	Max-planck institut fur Radioastronomie\\
+	https://arxiv.org/pdf/astro-ph/0208557v1.pdf
+	
+	\bibitem{ASTRON}
+	astron education website\\
+	Data analysis applet\\
+	http://astron.nl/onderwijs/
+	
+	\bibitem{Ryan}
+	Sean G. Ryand and Andrew J. Norton\\
+	Stellar Evolution and Nucleosynthesis\\
+	Cambridge University press, 2010
+
+	\bibitem{Wang}
+	Wang, N. and Manchester, R.~N. and Johnston, S. and Rickett, B. and Zhang, J. and Yusup, A. and Chen, M.
+	Long-term scintillation observations of five pulsars at 1540 MHz
+	journal  = mnras, 2005, volume 358, pages 270-282
+	http://mnras.oxfordjournals.org/content/358/1/270.full.pdf
+
+	\bibitem{Hobbs}
+	G. Hobbs, A. G. Lyne and M. Kramer
+	An analysis of the timing irregularities for 366 pulsars
+	http://mnras.oxfordjournals.org/content/402/2/1027
+	
+	http://adsabs.harvard.edu/abs/2005MNRAS.358..270W
+
+\bibitem{Cordes}
+Cordes-Lazio NE2001 Galactic Free Electron Density Model
+https://www.nrl.navy.mil/rsd/rorf/ne2001/	
+
+	\bibitem{NAD}
+	NASA/IPAC EXTRAGALACTIC DATABASE
+   https://ned.ipac.caltech.ed
+
+	\bibitem{Burke}
+	B.F.Burke and F.Graham-Smith\\
+	An introduction to radio astronomy\\
+	Cambridge university press, 2010\\
+	
+\bibitem{Spingola}
+		author   = {{Spingola}},\\
+		title    = {Practical 1: Introduction to Observations and Data Analysis},
+	
+\end{thebibliography}
+
+	
+	
+	%----------------------------------------------------------------------------------------
+	
+\end{document}
